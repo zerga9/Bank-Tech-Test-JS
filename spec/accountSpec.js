@@ -14,4 +14,9 @@ describe("Account", function(){
     expect(account.balance).toEqual(500);
   });
 
+  it("decreases value of balance with withdrawal", function() {
+    account.withdrawal("withdrawal", 200, "12/12/2018");
+    expect(account.balance).toEqual(-200);
+  });
+
 });
