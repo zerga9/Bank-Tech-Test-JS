@@ -28,5 +28,11 @@ it("should give a date of withdrawal", function() {
   account.withdrawal("withdrawal", 200, "11/11/2018");
   expect(account.transactions[0]).toContain("11/11/2018")
 })
+it("should give balance of each transaction", function() {
+  account.deposit("deposit", 500, "13/10/2015")
+  account.withdrawal("withdrawal", 50, "15/11/2015")
+  expect(account.transactions[0]).toContain(500)
+  expect(account.transactions[1]).toContain(450)
+})
 
 });

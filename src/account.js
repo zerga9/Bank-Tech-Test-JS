@@ -5,10 +5,10 @@ function Account() {
 
 Account.prototype.deposit = function(type, amount, date) {
   this.balance += amount;
-  this.transactions.push([type, amount, date])
+  this.transactions.push([type, amount, date, this.balance])
 }
 
 Account.prototype.withdrawal = function(type, amount, date)  {
   this.balance -= amount;
-  this.transactions.push([type, amount, date])
+  this.transactions.push([type, amount, date, this.balance])
 }
