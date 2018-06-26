@@ -24,4 +24,9 @@ describe("Account", function(){
   expect(account.transactions[0]).toContain("11/11/2018")
 })
 
+it("should give a date of withdrawal", function() {
+  account.withdrawal("withdrawal", 200, "11/11/2018");
+  expect(account.transactions[0]).toContain("11/11/2018")
+})
+
 });
