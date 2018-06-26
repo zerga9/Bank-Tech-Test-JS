@@ -19,4 +19,9 @@ describe("Account", function(){
     expect(account.balance).toEqual(-200);
   });
 
+  it("should give a date of deposit", function() {
+  account.deposit("deposit", 200, "11/11/2018");
+  expect(account.transactions[0]).toContain("11/11/2018")
+})
+
 });
